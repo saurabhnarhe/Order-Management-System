@@ -13,7 +13,6 @@ const tokenizeAsync = (payload) =>
 const verify = (token) => {
   try {
     const res = jwt.verify(token, secret);
-    console.log(res);
   } catch (e) {
     if (e instanceof jwt.JsonWebTokenError) return false;
   }
